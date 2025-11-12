@@ -23,9 +23,24 @@
             <div class="grid">
                 <nav class="header__nav">
                     <ul class="header__navbar--list">
-                        <li class="header__navbar--item header__navbar--item--separate">Vào cửa hàng trên ứng dụng
-                            TickID</li>
-                        <li class="header__navbar--item">Kết nối
+                        <li class="header__navbar--item header__navbar--item--has-qr header__navbar--item--separate">
+                            Vào cửa hàng trên ứng dụng TickID
+                            <!-- header qr code -->
+                            <div class="header_qr">
+                                <img src="./assets/img/qrcode.jpg" class="header__qr-img" alt="QR CODE">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img class="header__qr-down-img" src="./assets/img/app.png" alt="App Store">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img class="header__qr-down-img" src="./assets/img/gg.png" alt="App Store">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="header__navbar--item">
+                            <span class="header__navbar-title--no-poiter">Kết nối</span>
                             <a href="" class="header__navbar-icon-link">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
@@ -37,18 +52,19 @@
                     <ul class="header__navbar--list">
                         <li class="header__navbar--item">
                             <a href="" class="header__navbar-item-link">
-                                <i class="fa-solid fa-bell"></i>
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
                                 Thông báo
                             </a>
                         </li>
-                        <li class="header__navbar--item">
+                        <li class="header__navbar-icon header__navbar--item">
                             <a href="" class="header__navbar-item-link">
-                                <i class="fa-solid fa-circle-question"></i>
+                                <i class="header__navbar-icon fa-solid fa-circle-question"></i>
                                 Trợ giúp</a>
                         </li>
-                        <li class="header__navbar--item header__navbar--item--strong header__navbar--item--separate ">
+                        <li
+                            class="header__navbar-icon header__navbar--item header__navbar--item--strong header__navbar--item--separate ">
                             Đăng ký</li>
-                        <li class="header__navbar--item header__navbar--item--strong">Đăng nhập</li>
+                        <li class="header__navbar-icon header__navbar--item header__navbar--item--strong">Đăng nhập</li>
                     </ul>
 
                 </nav>
