@@ -37,7 +37,7 @@
   color: rgb(255, 255, 255, 0.7);
 }
 .header__navbar--item--strong {
-  font-weight: 400;
+  font-weight: 300;
 }
 .header__navbar--item--separate:after {
   content: "";
@@ -47,7 +47,7 @@
   width: 1px;
   height: 14px;
   right: -9px;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
 }
 .header__navbar-icon-link {
@@ -102,14 +102,31 @@
 .header__navbar--item--has-qr:hover .header_qr {
   display: block;
 }
+.header__navbar--item--has-notify:hover .header__notify {
+  display: block;
+}
 /* header notification  */
 .header__notify {
   position: absolute;
-  top: 118px;
+  top: 118%;
   right: 0;
   width: 404px;
   background-color: var(--white-color);
   border: 1px solid #d3d3d3;
+  cursor: default;
+  animation: headerNotifyGrowth 0.2s ease-in;
+  transform-origin: calc(100%-20px) top;
+  display: none;
+}
+@keyframes headerNotifyGrowth {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .header__notify-header {
   height: 40px;
@@ -150,9 +167,10 @@
 .header__notify-name {
   display: block;
   font-size: 1.4rem;
-  color: var(--black-color);
+  color: var(--text-color);
   margin-top: 10px;
   font-weight: 400;
+  line-height: 1.8rem;
 }
 .header__notify-description {
   display: block;
@@ -160,13 +178,17 @@
   color: #756f6e;
   padding-top: 10px;
   line-height: 1.4rem;
+  margin-top: 4px;
 }
 .header__notify-seeAll {
-  text-align: center;
+  display: flex;
   padding: 16px;
 }
 .header__notify-seeAll-btn {
   text-decoration: none;
   color: var(--black-color);
-  padding: 16px 16px;
+  padding: 8px 48px;
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
